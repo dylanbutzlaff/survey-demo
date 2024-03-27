@@ -1,10 +1,8 @@
+(async () => {
 
-(async () => { 
+    const survey = require('./survey')
+    survey.setUrl('https://raw.githubusercontent.com/dylanbutzlaff/survey-demo/main/questions.json')
 
-    const { prompt } = require('enquirer')
-    const axios = require('axios')
-
-    
-
+    console.log(await survey.run()) 
 
 })()
